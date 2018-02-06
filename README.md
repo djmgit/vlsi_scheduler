@@ -61,3 +61,5 @@ Given below is a sample graph in json:
 ```
 
 The above json file corresponds to the following graph
+
+![picture](pictures/graph.png)
