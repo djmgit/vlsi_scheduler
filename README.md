@@ -23,7 +23,7 @@ To see the script in action, please follow the following steps
 ### How it works?
 The script requires the operation control graph as an input. This graph can be provided as a json input. That is
 a json file containing the definition of the graph along with some other parameters has to be present in 
-the same directory has the source code. Currently a sample graph called **ocg.json** is already present in the repo.
+the same directory as the source code. Currently a sample graph called **ocg.json** is already present in the repo.
 This file can be editted to provide a different graph input to solve and schedule.
 
 ### How to create the json graph
@@ -70,7 +70,7 @@ The above json file corresponds to the following graph
   the operations that are dependent on the given operation. For example, in the above json file, the list corresponding 
   to 2 contains 5 and 6 which means, 5 and 6 are dependent on 2. This can be verified from the picture where it can be seen
   that o5(/) and o6(+) depends on o2 (-). In this way the graph is created. This is nuothing but **adjajency list
-  represention** of the OCG.
+  represention** of the OCG. In the graph declaration, NOP steps must be present.
 - Next we need to mention the number of operator(resource) type available. Here it is 4, namely - multiplication(division), 
   addition(substraction), lesser than and NOP (which is a dummy operator).
 - Next we need to mention what are the operations present under each operator/resource type.
@@ -112,3 +112,9 @@ Outpput stored in output.txt
 
 As mentioned, the ILP model will be generated and stored as lp_model.txt and output (schedule) will be stored as output.txt
 in the same directory
+
+### Limistaions
+- Currently it is assumed that number of resources available for all resource types is 1.
+- It is also assumed that propagation delay for all operations is 1.
+
+These will be removed in next iteration.
