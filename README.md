@@ -11,6 +11,8 @@ On ubuntu, lp-solve can be installed as follows -
 
 ``` sudo apt-get install lp-solve ```
 
+**As of now it can only be used on linux systems (tested on ubuntu 16.04) as some linux specific commands has been used**
+
 ### Quickstart
 A sample operation control graph has been provided in the repository.
 To see the script in action, please follow the following steps
